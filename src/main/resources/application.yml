@@ -1,0 +1,38 @@
+## Datasource
+spring:
+
+    
+  security:
+    user:
+      name: admin
+      password: 1234
+      
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gira
+    username: postgres
+    password: admin
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+  flyway:
+    enabled: true
+    driver-class-name: org.postgresql.Driver
+springdoc:
+  api-docs:
+    path: /openapi/v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  packages-to-scan:
+  - cybersoft.javabackend.girajava14gv
+  
+api:
+  role:
+    name: role controller
+    description: role endpoints
